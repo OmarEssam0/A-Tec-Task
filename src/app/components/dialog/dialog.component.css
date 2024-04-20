@@ -1,0 +1,143 @@
+.main-title {
+  font-size: 12px;
+  /* font-weight: 500; */
+}
+
+.card {
+  /* width: 490px; */
+  border-radius: 7.83px;
+  border-color: #e7e5e5;
+}
+
+.header-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+}
+
+.header-close-icon {
+  width: 22px;
+  height: 22px;
+  background-color: #F4F4F4;
+  border-radius: 4.89px;
+  transition: .3s;
+}
+
+.header-close-icon:hover {
+  background-color: #adadad !important;
+}
+
+.header-close-icon i {
+  font-size: 12px !important;
+  transition: .3s;
+}
+
+.header-close-icon:hover i {
+  color: white;
+}
+
+.poll-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.poll-icon:hover {
+  background-color: rgb(232, 232, 232) !important;
+}
+
+.customer-icon,
+.progress-b {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: #E8F2FF;
+}
+
+.select-customer {
+  border: 0.5px solid #e1e4ee23;
+  border-radius: 8px;
+}
+.bg-blue{
+  background-color: #d0e6fb !important;
+}
+.customer-title p,
+.customer-price p {
+  font-size: 8px;
+  color: #83899F;
+}
+
+.form-control {
+  padding: 0px 10px !important;
+}
+
+.search-customer::placeholder {
+  font-size: 8px;
+}
+
+.file-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.range-section {
+  padding: 10px;
+  border-radius: 6px;
+}
+.leader-detials .img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.leader-detials .img img {
+  width: 114%;
+}
+.leader-detials {
+  border-radius: 5px;
+}
+.leader-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+}
+.fly-icon {
+  bottom: -2px;
+  left: 0;
+}
+.deals {
+  border-radius: 8px;
+}
+.p-chips .p-chips-multiple-container .p-chips-token {
+ padding:  2px 8px 2px 8px !important;
+ border-radius: 6px;
+}
+::ng-deep .p-chips-token:first-child {
+  background-color: #dd6c2038;
+  color: #dd6c20;
+}
+
+::ng-deep .p-chips-token:nth-child(2) {
+  background-color: #38A1691A;
+}
+
+::ng-deep .p-chips-token:nth-child(3) {
+  background-color: #5B4FE91A;
+}
+.plus-icon{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.price::placeholder{
+  text-align: center;
+}
+.select{
+  /* padding:10px; */
+  border-radius: 5px;
+}
+select{
+  font-family: 'fontawesome';
+}

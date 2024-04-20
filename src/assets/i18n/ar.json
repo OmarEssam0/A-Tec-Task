@@ -1,0 +1,40 @@
+{
+   "Create a new deal" : "انشاء صفقة جديده",
+  "Buying/renting a residential apartment in the First Settlement" : "شراء / تأجير شقة في منطقة التجمع الأول" ,
+  "Select the client" : "حدد العميل" ,
+   "Please search for the customer to choose":"يرجي البحث عن العميل لإختياره" ,
+ "Search for a client: example, client name" :  "إبحث عن عميل : مثال اسم العميل , رقم الهاتف",
+  "Transaction price" : "سعر الصفقة" ,
+  "price is the amount paid including taxes" :  "سعر الصفقة هو المبلغ المدفوع شامل الضرائب" ,
+ "The probability the deal being successful" :  "إحتمالية نجاح الصفقة" ,
+  "Transaction official" : "مسئول الصفقة" ,
+   "Source" : "المصدر" ,
+   "The project" : "المشروع" ,
+  "Omar Essam":  "عمر عصام" ,
+  "Tags" : "العلامات" ,
+   "Products" : "المنتجات" ,
+  "There are no products" : "لا يوجد منتجات" ,
+   "Please add to the existing deal" : "يرجي إضافة منتجات وإدارتها للصفقة الحالية" ,
+  "Signing of the contract" : "توقيع العقد" ,
+  "Add the deal" : "اضافه الصفقه" ,
+  "Add a product" : "اضافه منتج" ,
+  "Hello, We, ABC Technology, would like to confirm our agreement to the terms of the contract for providing maintenance and technical support services for your products. Please sign this contract as attached, and return it to us as soon as possible.Thank you very much for your cooperation.Best Regards,John Doe" : "السلام عليكم، نحن شركة ABC للتكنولوجيا نود تأكيد توافقنا على شروط العقد الخاص بتقديم خدمات الصيانة والدعم التقني لمنتجاتكم. يرجى توقيع هذا العقد كما هو مرفق، وإعادته لنا في أقرب وقت ممكن. شكرًا جزيلاً على تعاونكم. أطيب التحيات،John Doe مدير علاقات العملاء شركة ABC للتكنولوجيا" ,
+  "signature" : "توقيع",
+  "Instgaram" : "منصة الإنستجرام" ,
+   "Facebook" : "منصة الفيسبوك" ,
+   "Twitter" : "منصة اكس" ,
+  "Victoria de Mero" : "فيكتوريا دي ميرو" ,
+   "Mountain View" : "ماونتن فيو"  ,
+  "Katameya Heights" : "القطاميه هايتس"
+
+}
+
+
+
+
+
+
+
+
+
+

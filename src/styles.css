@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+ /* @import url('https://fonts.cdnfonts.com/css/neo-sans-arabic'); */
+
+@font-face{
+  font-family: "Neo Sans Arabic";
+  src:url('assets/fonts/NeoSansArabic.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+/* @font-face{
+  font-family: "Neo Sans Arabic";
+  src:url('assets/fonts/NeoSansArabicMedium.ttf');
+  font-weight: 500;
+  font-style: normal;
+} */
+*{
+  font-family: Neo Sans Arabic;
+}
+h1 ,h2 , h3 , h4, h5 ,h6 , p , ul {
+  margin: 0;
+}
+
+.f-12{
+  font-size: 12px;
+}
+
+.fw-500{
+  font-weight: 500;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.main-border{
+  border:0.5px #f2f2f2 solid;
+}
+.fs-8{
+  font-size: 8px;
+}
+.p-chips{
+  padding: 0px;
+}
+.p-chips .p-chips-multiple-container{
+  padding: 0;
+}
+.p-chips .p-chips-multiple-container .p-chips-token {
+  padding:2px 8px 2px 8px !important;
+  border-radius: 6px;
+  margin: 0;
+  font-size: 12px;
+ }
+ .p-chips-multiple-container {
+  flex-wrap: nowrap;
+ }
+ .p-panel.p-panel-toggleable .p-panel-header {
+  padding: 5px;
+}
+.p-panel .p-panel-header{
+  border-radius: 6px;
+  background-color: #fff;
+}
+ul li {
+  margin-right: .25rem !important;
+  margin-left: .25rem !important;
+}

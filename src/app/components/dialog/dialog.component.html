@@ -1,0 +1,317 @@
+<div class="bg-body-white" [dir]="dirc">
+  <div class="card">
+    <h5
+      class="card-header d-flex justify-content-between align-items-center bg-white p-2"
+    >
+      <div class="card-header-title d-flex align-items-center gap-1">
+        <div
+          class="header-icon bg-primary d-flex justify-content-center align-items-center"
+        >
+          <img src="assets/icons/note-2.svg" alt="note2" class="img-fluid" />
+        </div>
+        <p class="f-12 fw-500 fw-bold">{{ "انشاء صفقة جديده" | translate }}</p>
+      </div>
+      <div class="d-flex gap-1 align-items-center">
+        <div>
+          <button class="btn" (click)="direction('en')" *ngIf="dir">
+            English
+          </button>
+          <button class="btn" (click)="direction('ar')" *ngIf="!dir">
+            العربيه
+          </button>
+        </div>
+        <div
+          (click)="closeDialog()"
+          class="header-close-icon d-flex justify-content-center align-items-center cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark fw-bold"></i>
+        </div>
+      </div>
+    </h5>
+    <div class="card-body bg-body-tertiary">
+      <div class="select-place">
+        <div class="row">
+          <div class="col-10">
+            <div class="border rounded-3 bg-white place p-2">
+              <h4 class="main-title">
+                {{ "شراء / تأجير شقة في منطقة التجمع الأول" | translate }}
+              </h4>
+            </div>
+          </div>
+          <div class="col-2">
+            <div
+              class="poll-icon border border-1 d-flex justify-content-center align-items-center bg-white cursor-pointer"
+            >
+              <img src="assets/icons/Vector.svg" alt="poll" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="select-price-and-customer py-3">
+        <div class="row g-2">
+          <div class="col-md-6">
+            <div
+              [ngClass]="
+                'select-customer bg-white  p-2 cursor-pointer ' + bgColor
+              "
+              (click)="activeBtn()"
+            >
+              <div class="customer pb-2 d-flex align-items-center gap-1">
+                <div
+                  class="customer-icon d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="assets/icons/profile-2user.svg"
+                    alt="profileUser"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="customer-title">
+                  <h5 class="f-12">{{ "حدد العميل" | translate }}</h5>
+                  <p>{{ "يرجي البحث عن العميل لإختياره" | translate }}</p>
+                </div>
+              </div>
+              <span class="p-input-icon-left d-block w-100">
+                <i class="fa-solid fa-magnifying-glass" width="12px"></i>
+                <input
+                  type="text"
+                  [disabled]="click"
+                  class="form-control search-customer cursor-pointer"
+                  list="datalistOptions"
+                  [placeholder]="
+                    'إبحث عن عميل : مثال اسم العميل , رقم الهاتف' | translate
+                  "
+                />
+                <datalist id="datalistOptions">
+                  <option *ngFor="let i of serachBtnData">
+                    {{ i.name }}
+                  </option>
+                </datalist>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="select-customer bg-white p-2 cursor-pointer">
+              <div class="customer pb-2 d-flex align-items-center gap-1">
+                <div
+                  class="customer-icon d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="assets/icons/wallet-minus.svg"
+                    alt="wallet"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="customer-price">
+                  <h5 class="f-12">{{ "سعر الصفقة" | translate }}</h5>
+                  <p>
+                    {{
+                      "سعر الصفقة هو المبلغ المدفوع شامل الضرائب" | translate
+                    }}
+                  </p>
+                </div>
+              </div>
+              <span class="p-input-icon-left d-block w-100">
+                <input
+                  type="text"
+                  disabled
+                  class="form-control cursor-pointer price"
+                  list="datalistOptions"
+                  placeholder="50,000$"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="range-section bg-white main-border">
+        <div class="row">
+          <div class="col-5">
+            <div class="range-title d-flex align-items-center gap-1">
+              <span>
+                <img
+                  src="assets/icons/Group 1000016161.svg"
+                  alt="icon"
+                  class="img-fluid"
+                />
+              </span>
+              <h5 class="f-12">{{ "إحتمالية نجاح الصفقة" | translate }}</h5>
+              <span
+                class="file-icon d-flex justify-content-center align-items-center bg-white main-border"
+              >
+                <img
+                  src="../assets/icons/file-edit (1) 1.svg"
+                  alt="file-edit"
+                  class="img-fluid"
+                />
+              </span>
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="d-flex align-items-center gap-1">
+              <input
+                type="range"
+                class="w-100"
+                min="0"
+                max="100"
+                [(ngModel)]="value"
+              />
+              <span
+                class="progress-b d-flex justify-content-center align-items-center"
+              >
+                <p class="f-12">{{ value }}%</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="presonal-data py-2">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="leader">
+              <h5 class="f-12">{{ "مسئول الصفقة" | translate }}</h5>
+              <div
+                class="leader-detials main-border bg-white py-1 px-1 my-2 d-flex justify-content-between align-items-center"
+              >
+                <div class="leader-img d-flex gap-1 align-items-center">
+                  <div class="img main-border">
+                    <img
+                      src="assets/images/fb7b48b69e4c286b107771bb4afd0ebe.jpeg"
+                      alt="man"
+                      class=""
+                    />
+                  </div>
+                  <p class="fw-bold f-12">{{ "عمر عصام" | translate }}</p>
+                </div>
+                <div
+                  class="leader-icon main-border bg-white d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="assets/icons/user.svg"
+                    alt="user"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="assets/icons/Group 1000013449.svg"
+                    alt="icon"
+                    class="img-fluid position-absolute fly-icon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="source">
+              <h5 class="f-12">{{ "المصدر" | translate }}</h5>
+              <div class="selector my-2">
+                <select
+                  class="select main-border f-12 w-100 py-2 px-2"
+                  aria-label="Default select example"
+                >
+                  <option *ngFor="let i of selectData">
+                    <i [ngClass]="i.icon"></i>
+                    <!-- {{i.icon}} -->
+                    {{ i.selectName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="source">
+              <h5 class="f-12">{{ "المشروع" | translate }}</h5>
+              <div class="selector my-2">
+                <select class="select main-border f-12 w-100 py-2 px-2">
+                  <option *ngFor="let i of selectProject">
+                    {{ i.selectName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marks-section">
+        <h5 class="f-12 pb-2">{{ "العلامات" | translate }}</h5>
+        <div class="p-fluid">
+          <p-chips [(ngModel)]="values" (onAdd)="addChip($event)" [max]="max">
+          </p-chips>
+        </div>
+      </div>
+      <div class="products-section py-2">
+        <p-panel
+          [header]="'المنتجات' | translate"
+          [toggleable]="true"
+          class="bg-white"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <img
+                src="assets/images/Group 1000016170.svg"
+                alt="no products"
+                class="img-fluid"
+              />
+            </div>
+            <div class="f-12">
+              <h4 class="f-12 fw-bold">{{ "لا يوجد منتجات" | translate }}</h4>
+              <p class="fs-8">
+                {{ "يرجي إضافة منتجات وإدارتها للصفقة الحالية" | translate }}
+              </p>
+            </div>
+            <div>
+              <button
+                class="btn btn-primary p-1 d-flex align-items-center gap-1 fs-12"
+              >
+                <i class="fa-solid fa-plus f-12 d-block"></i
+                >{{"اضافه منتج"| translate }}
+              </button>
+            </div>
+          </div>
+        </p-panel>
+      </div>
+    </div>
+    <h5
+      class="card-header d-flex justify-content-between align-items-center bg-white p-2"
+    >
+      <div class="card-header-title d-flex align-items-center gap-1">
+        <button (click)="showDialog()" class="btn f-12 text-muted">
+          {{ "توقيع العقد" | translate }}
+        </button>
+        <p-dialog
+          header="Header"
+          [(visible)]="visible"
+          [modal]="true"
+          [style]="{ width: '50rem' }"
+          [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+        >
+          <ng-template pTemplate="header">
+            <div
+              class="inline-flex align-items-center justify-content-center gap-2"
+            >
+              <span class="font-bold white-space-nowrap">
+                {{ "توقيع" | translate }}</span
+              >
+            </div>
+          </ng-template>
+          <p class="m-0">
+            {{ msg | translate }}
+          </p>
+          <ng-template pTemplate="footer">
+            <p-button
+              icon="pi pi-check"
+              (click)="visible = false"
+              label="Ok"
+              pAutoFocus
+              [autofocus]="true"
+            ></p-button>
+          </ng-template>
+        </p-dialog>
+      </div>
+      <div>
+        <button class="btn btn-primary f-12" (click)="add()">
+          {{ "اضافه الصفقه" | translate }}
+        </button>
+      </div>
+    </h5>
+  </div>
+</div>
